@@ -6,25 +6,26 @@
 #include "src/n-pingfang/ShellSort.h"
 #include "src/nlogn/MergeSort.h"
 #include "src/nlogn/MergeSortBU.h"
+#include "src/nlogn/QuickSort.h"
+#include "src/nlogn/QuickSortDoublePoint.h"
 
 using namespace std;
 
 int main() {
 
-    int n = 50000;
+    int n = 200000;
 
-    // 测试2 测试近乎有序的数组
-    int swapTimes = 0;
+    cout << "Test for Random array" << endl;
 
-    cout << "Test for nearly ordered array, size = " << n << ", swap time = " << swapTimes << endl;
-
-    int *arr1 = SortTestHelper::generateNearlyOrderedArray(n, swapTimes);
+    int *arr1 = SortTestHelper::generateRandomArray(n, 0, 20);
     int *arr2 = SortTestHelper::copyIntArray(arr1, n);
 
-    SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
-    SortTestHelper::testSort("Merge Sort", mergeSortBU, arr2, n);
+    SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
+    SortTestHelper::testSort("Quick Sort", quickSortDoublePoint, arr1, n);
 
     delete[] arr1;
     delete[] arr2;
+
+
     return 0;
 }

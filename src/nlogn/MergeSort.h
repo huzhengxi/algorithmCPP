@@ -19,8 +19,8 @@
  */
 template<typename T>
 void __merge(T arr[], int l, int mid, int r) {
-    T aux[r - l + 1];
 
+    T *aux = new T[r - l + 1];
     for (int i = l; i <= r; i++) {
         aux[i - l] = arr[i];
     }
@@ -41,6 +41,7 @@ void __merge(T arr[], int l, int mid, int r) {
             j++;
         }
     }
+    delete[] aux;
 }
 
 /**
