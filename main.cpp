@@ -7,7 +7,7 @@
 #include "src/nlogn/MergeSort.h"
 #include "src/nlogn/MergeSortBU.h"
 #include "src/nlogn/QuickSort.h"
-#include "src/nlogn/QuickSortDoublePoint.h"
+#include "src/nlogn/QuickSort2Ways.h"
 
 using namespace std;
 
