@@ -8,6 +8,7 @@
 #include "src/nlogn/MergeSortBU.h"
 #include "src/nlogn/QuickSort.h"
 #include "src/nlogn/QuickSort2Ways.h"
+#include "src/nlogn/QuickSort3Ways.h"
 
 using namespace std;
 
@@ -21,7 +22,8 @@ int main() {
     int *arr2 = SortTestHelper::copyIntArray(arr1, n);
 
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
-    SortTestHelper::testSort("Quick Sort", quickSortDoublePoint, arr1, n);
+    SortTestHelper::testSort("Quick Sort", quickSort2Ways, arr1, n);
+    SortTestHelper::testSort("Quick Sort 3ways", quickSort3Ways, arr1, n);
 
     delete[] arr1;
     delete[] arr2;

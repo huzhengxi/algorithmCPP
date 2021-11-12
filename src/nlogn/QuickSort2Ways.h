@@ -40,7 +40,7 @@ void __quickSort2Ways(T *arr, int l, int r) {
 }
 
 template<typename T>
-void quickSortDoublePoint(T arr[], int n) {
+void quickSort2Ways(T *arr, int n) {
 
     __quickSort2Ways(arr, 0, n - 1);
 }
